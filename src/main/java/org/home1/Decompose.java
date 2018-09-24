@@ -15,22 +15,20 @@ public class Decompose {
 
 
     public static void dec( int number) {
-        String text = Integer.toString(number);
-        int i = 4;
-        int length = Integer.toString(number).length();
-        while (i < length) {
-            char num = text.charAt(i--);
-            System.out.println(num);
+
+        while ( number > 0) {
+            System.out.println(number%10);
+            number = number / 10;
         }
 
     }
 
-
     public static void main(String[] args) {
-        dec(12929);
+        dec(45685);
     }
 
 }
+
 
 
 
