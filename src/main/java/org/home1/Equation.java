@@ -14,31 +14,25 @@ public class Equation {
 
     public static void eqtn1(int x, int y, int z,int n) {
         long eq1 = (long) ((x + (y - 100) * z / n));
-        System.out.println(eq1);
-//        System.out.printf("The solution of the 1 Equation: %n %eq1", eq1);
+        System.out.printf("%nThe solution of the 1 Equation: %s", eq1);
     }
 
 
     public static void eqtn2(int x, int y, int z,int n) {
         int eq2 = (x - (50 + y * z) * n) + x;
-        System.out.println(eq2);
-//        System.out.printf("The solution of the 2 Equation: %n", eq2);
+        System.out.printf("%nThe solution of the 2 Equation: %s", eq2);
 
     }
 
     public static void eqtn3(int x, int y, int z,int n) {
         float eq3 = (float)(x * (y / (z-1) + 555) - n);
-        System.out.println(eq3);
-
-//        System.out.printf("The solution of the 3 Equation: %n", eq3);
+        System.out.printf("%nThe solution of the 3 Equation: %s", eq3);
     }
 
 
     public static void eqtn4(int x, int y, int z,int n) {
         double eq4 = (double)(-x / y + z * (n+1));
-        System.out.println(eq4);
-
-//        System.out.printf("The solution of the 4 Equation: %n", eq4);
+        System.out.printf("%nThe solution of the 4 Equation: %s", eq4);
     }
 
 
@@ -49,6 +43,8 @@ public class Equation {
         int y = console.nextInt();
         int z = console.nextInt();
         int n = console.nextInt();
+//        int f = console.nextDouble();
+
 
         eqtn1(x,y,z,n);
         eqtn2(x,y,z,n);
