@@ -1,4 +1,4 @@
-package org.home;
+package org.home.assignment0;
 
 import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 

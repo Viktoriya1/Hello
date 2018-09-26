@@ -1,4 +1,4 @@
-package org.home1;
+package org.home.assignment1;
 import java.util.Scanner;
 
 
@@ -17,7 +17,7 @@ import java.util.Scanner;
 public class Vector {
 
     public static void vectorLength(double x, double y, double z) {
-        double vector = (Math.pow(x, 2)) + (Math.pow(y, 2)) + (Math.pow(z, 2));
+        double vector = Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2);
         String a = "Hi Vikki";
         System.out.printf("Length of Vector = %s %s", Math.sqrt(vector), a);
     }

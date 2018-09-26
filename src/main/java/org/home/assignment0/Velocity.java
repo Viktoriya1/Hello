@@ -1,4 +1,4 @@
-package org.home;
+package org.home.assignment0;
 
 import java.util.Scanner;
 
