@@ -17,7 +17,7 @@ public class Frame {
     public static String usersData = "";
 
     public static String space = " ";
-    public static String asterisk = "*";
+    public static int maxLengh = 0;
 
 
     //Получаю ФИО
@@ -27,15 +27,18 @@ public class Frame {
     }
 
     //Проверяю что больше ФИО или curseLine (Курс: Java core)
-    public static int findMaxLine() {
-        return (usersData.length() > curseLine.length()) ? usersData.length() : curseLine.length();
+    public static void findMaxLine() {
+
+        maxLengh = (usersData.length() > curseLine.length()) ? usersData.length() : curseLine.length();
+        maxLengh = maxLengh + 4;
     }
 
     //Напечатать строку со звездачками
     public static String getLineWithAsterisk() {
+
         String asterisks = "";
-        for (int i = 0; i < findMaxLine() + 4; i++) {
-            asterisks = asterisks + asterisk;
+        for (int i = 0; i < maxLengh; i++) {
+            asterisks += "*";
         }
         return asterisks;
     }
@@ -44,10 +47,10 @@ public class Frame {
         String spacesBef = "";
         String spacesAft = "";
         int countAfter = 0;
-        int countBefore = (findMaxLine() + 4 - str.length()) / 2;
+        int countBefore = (maxLengh - str.length()) / 2;
         String readyLine = "";
 
-        if ((findMaxLine() + 4 - str.length()) % 2 > 0) {
+        if ((maxLengh - str.length()) % 2 > 0) {
             countAfter = countBefore + 1;
         } else {
             countAfter = countBefore;
@@ -58,19 +61,16 @@ public class Frame {
         for (int i = 1; i < countAfter; i++) {
             spacesAft = spacesAft + space;
         }
-        String before = asterisk + spacesBef;
-        String after = spacesAft + asterisk;
+        String before = "*" + spacesBef;
+        String after = spacesAft + "*";
         readyLine = before + str + after;
         return readyLine;
     }
 
     public static void main(String[] args) {
         getUserData();
-        System.out.printf("%s%n%s%n%s%n%s%n%s%n",
-                getLineWithAsterisk(),
-                addStarsAndSpace(curseLine),
-                addStarsAndSpace(student),
-                addStarsAndSpace(usersData),
-                getLineWithAsterisk());
+        findMaxLine();
+        String stars = getLineWithAsterisk();
+        System.out.printf("%s%n%s%n%s%n%s%n%s%n", stars, addStarsAndSpace(curseLine), addStarsAndSpace(student), addStarsAndSpace(usersData), stars);
     }
 }
