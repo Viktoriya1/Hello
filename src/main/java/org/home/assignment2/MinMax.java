@@ -14,7 +14,6 @@ public class MinMax {
     public static long min = 9;
     public static long max = 0;
 
-
     public static void getNumber() {
         System.out.println("Please, enter number:");
         data = new Scanner(System.in).nextLong();
