@@ -18,7 +18,7 @@ package org.home.assignment3;
 
 import java.util.Scanner;
 
-public class Task1 {
+public class MenuOfStrings {
 
     public static String enteredData = "";
     public static String variant = "";
