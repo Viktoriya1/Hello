@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 //Вводимая строка должна состоять из символов только латинского алфавита.
 //Вывести на экран(построчно) кол-во повторений каждого символа входной строки.
 
-public class Task2 {
+public class CalculateCount {
 
     public static String usersData = "helllllllooooo";
 
@@ -17,7 +17,7 @@ public class Task2 {
         usersData = new Scanner(System.in).nextLine();
     }
 
-    public static void isValid() {
+    public static void calculate() {
         Pattern p = Pattern.compile("^[a-zA-Z]{0,100}$");
         Matcher m = p.matcher(usersData);
         if (m.matches() == true) {
@@ -41,6 +41,6 @@ public class Task2 {
 
     public static void main(String[] args) {
         getData();
-        isValid();
+        calculate();
     }
 }
