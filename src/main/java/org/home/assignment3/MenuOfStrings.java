@@ -10,7 +10,7 @@ package org.home.assignment3;
 //Если ввели любой другой символ (не A,B,C,D,E,F) - программа должна вывести текст об ошибке и заново предложить выбрать вариант
 //
 //То есть после ввода строки программа отображает меню, представленное выше, через которое можно удобно выбирать любое действие.
-// Выбор действия возможен как с заглавной так и с прописной буквы.
+//Выбор действия возможен как с заглавной так и с прописной буквы.
 //Каждое действие над исходной строкой оформить в виде отдельного статического метода.
 //Для выбора варианта использовать оператор switch.
 //
@@ -73,24 +73,25 @@ public class MenuOfStrings {
     }
 
     public static void whatWillWeDo() {
+        String t=variant.toLowerCase();
         displayMenu();
-            switch (variant) {
-                case "A":
+
+            switch (t) {
+                case "a" :
                     System.out.println(doUpper());
-                    break;
-                case "B":
+                case "b":
                     System.out.println(doLower());
                     break;
-                case "C":
+                case "c":
                     System.out.println(doEveryFirstUpper());
                     break;
-                case "D":
+                case "d":
                     System.out.println(doLikeInSentence());
                     break;
-                case "E":
+                case "e":
                     System.out.println(doEveryFirstLower());
                     break;
-                case "F":
+                case "f":
                     System.out.println("Bye!!!");
                     break;
                 default:
