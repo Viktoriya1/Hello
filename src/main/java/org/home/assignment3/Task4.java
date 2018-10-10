@@ -9,4 +9,11 @@ package org.home.assignment3;
 //     15  16  22  23  25  */
 //То есть, заполнение массива должно быть по диагонали, сверху-вниз, слева-направо. Причем заполнение еще и зигзагообразное.
 public class Task4 {
+
+
+    public enum Day {
+        SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY
+    }
+
+
 }
